@@ -1,0 +1,1 @@
+print("{}\n1".format(int(input())))

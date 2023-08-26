@@ -1,0 +1,1 @@
+print("{}\n3".format(int(input())**3))
