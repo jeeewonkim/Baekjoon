@@ -1,0 +1,48 @@
+#밑으로 두칸 후 오른쪽 한번
+#오른쪽 두칸 후 아래로 한칸
+# # # # # # # #
+# # # # # # # #
+# # # # # # # #
+# # # # # # # #
+# # # # # # # #
+# # # # # # # #
+# # # # # # # #
+# # # # # # # #
+#안되는 경우
+# 맨 아래서 1, 0 칸
+# 맨 오른쪽 1, 0 칸
+import string
+
+# chess = [list(string.ascii_lowercase[:8]) for _ in range(8)]
+
+# print(chess)
+
+# position = input()
+
+# if(position[0])
+
+alpha = list(string.ascii_lowercase[:8])
+
+position = input()
+count = 0;
+
+chess = [[i for i in range(8)]for _ in range(8)]
+
+now_x = int(alpha.index(position[0]))
+now_y = int(position[1])-1
+
+move = [
+    [2, -1], #오른쪽 위
+    [2, 1], #오른쪽 아래
+    [-2,-1], #왼쪽 위
+    [-2, 1] ,#윈쪽 아래
+    [1, -2] ,#위로 두번 오른쪽
+    [-1, -2] ,#위로 두번 왼쪽
+    [1, 2] ,#아래로 두번 오른쪽
+    [-1, 2] # 아래로 두번 왼쪽
+]
+for i in move:
+    if (0<= (now_x + int(i[0])) <=7) and (0<=(now_y+(i[1]))<=7):
+        count +=1        
+        
+print(count)
