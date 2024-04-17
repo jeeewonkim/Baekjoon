@@ -29,7 +29,7 @@ def solution(a, b, g, s, w, t):
 #     a-=g[i]
 #     return a
     
-# def silver(b,g,w,t,i):
+# def Silver(b,g,w,t,i):
 #     b-=s[i]
     
     # for p in per:
@@ -37,8 +37,8 @@ def solution(a, b, g, s, w, t):
     #         if a > 0:
     #             gold = min(w[i], g[i])
     #             a -= gold
-    #             silver = min(w[i]- gold, s[i])
-    #             b -= silver
+    #             Silver = min(w[i]- gold, s[i])
+    #             b -= Silver
             
     return answer
 # a,b,g,s,w,t = 10,10,[100],[100],[7],[10]
